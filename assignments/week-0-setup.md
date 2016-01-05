@@ -26,7 +26,7 @@ You must follow these steps in order.
 
 1. You need a user account on your machine with at least "admin" permissions. If this is your laptop and you
    are the only user account, you are good to go.
-2. [optional] You need **at least** MacOS 10.10 "Yosemite".  It is highly recommended that you updated to MacOS 10.11 "El Capitan".
+2. [optional] You need **at least** MacOS 10.10 "Yosemite".  It is highly recommended that you update to MacOS 10.11 "El Capitan".
 3. You should add the `Terminal` application to your `Dock`.
 `Terminal` comes pre-installed on your Mac, you can find it in the Applications folder
 or find it via spotlight by hitting `command (space)` to launch spotlight and typing "terminal".
