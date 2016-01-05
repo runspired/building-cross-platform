@@ -20,7 +20,7 @@ For example, below is part of the folder structure on my MacBook
 The "README" file containing the overview of the `git` repository for this class is located at
 `/Users/runspired/Github/building-cross-platform/README.md`. `.md` is a file extension, which conveys
 that the file is written in [Markdown](https://daringfireball.net/projects/markdown/basics), a plain text
-formatting syntax that is commonly used for technical documents and can be used commenting on StackOverflow,
+formatting syntax that is commonly used for technical documents and can be used when commenting on StackOverflow,
 Github, and in Slack.
 
 Since this file is in a git repository that I publicly publish, you can also find this file at
@@ -40,9 +40,9 @@ Applying this form to the URL for the README on Github we get
 
 The protocol tells us *how* we are requesting the file data be sent to us (we will get more into protocols another time).
 `subdomain`, `domain` and `tld` are all similar, and together function as an **Address** for the server on which the
-README file is to be found. The `path` is the file path on that server that leads to the README, much like there was 
-a path from `<root>` to README on my own MacBook.  There's some more going on behind the scenes on Github's servers that 
-a straight file path lookup, my file is very likely not "literally" at that path, but it helps to conceptualize everything 
+README file is to be found. The `path` protion of the URL is the file path on that server that leads to the README, much like there was 
+a path from `<root>` to README on my own MacBook.  There's more going on behind the scenes on Github's servers than 
+"just a file path lookup", my file is very likely not "literally" at that path, but it helps to conceptualize everything 
 as these nested folders leading to a file.
 
 As long as you are on the same device, file paths can be "relative" to another file.
