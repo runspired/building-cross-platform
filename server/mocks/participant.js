@@ -1,43 +1,49 @@
 /*jshint node:true*/
+var md5 = require('md5');
+
 module.exports = function(app) {
   var express = require('express');
   var participantRouter = express.Router();
 
   var participants = {
     '1': {
-      id: 1,
+      id: '1',
       firstName: 'Chris',
       lastName: 'Thoburn',
       email: 'runspired@gmail.com',
       phoneNumber: '+1 (713) 898-3236',
       buddy: null,
-      github: 'runspired'
+      github: 'runspired',
+      gravatar: 'http://www.gravatar.com/avatar/' + md5('runspired@gmail.com')
     },
     '2': {
-      id: 1,
+      id: '2',
       firstName: 'Jeffrey',
       lastName: 'Huang',
       email: 'jeffreyhuang165@gmail.com',
       phoneNumber: '+1 (773) 860-3808',
       buddy: '3',
-      github: 'jhuang165'
+      github: 'jhuang165',
+      gravatar: 'http://www.gravatar.com/avatar/' + md5('jeffreyhuang165@gmail.com')
     },
     '3': {
-      id: 1,
+      id: '3',
       firstName: 'Jianli',
       lastName: 'Huang',
       email: 'jianlihuang@yahoo.com',
       phoneNumber: '+1 (773) 860-3808',
       buddy: '2',
-      github: null
+      github: null,
+      gravatar: 'http://www.gravatar.com/avatar/' + md5('jianlihuang@yahoo.com')
     }
   };
 
   participantRouter.get('/', function(req, res) {
+    var participantsArray = Object.keys(participants).map(function(key) {
+      return participants[key];
+    });
     res.send({
-      'participants': Object.keys(participants).map(function(key) {
-        return participants[key];
-      })
+      'participants': participantsArray
     });
   });
 
