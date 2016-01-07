@@ -20,6 +20,7 @@
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
+    "ember-async-image": "0.0.1",
     "ember-cli": "1.13.13",
     "ember-cli-app-version": "^1.0.0",
     "ember-cli-babel": "^5.1.5",
@@ -38,6 +39,8 @@
     "ember-export-application-global": "^1.0.4",
     "express": "^4.13.3",
     "glob": "^4.5.3",
+    "liquid-fire": "0.22.1",
+    "md5": "^2.0.0",
     "morgan": "^1.6.1"
   }
 }
