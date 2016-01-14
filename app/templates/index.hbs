@@ -1,0 +1,16 @@
+<h2>All Participants</h2>
+<ul class="container-fluid">
+{{#each model as |participant|}}
+  <li class="row participant-card">
+    <div class="col-xs-4">
+      {{async-image src=participant.gravatar}}
+    </div>
+    <div class="col-xs-8">
+      {{#link-to 'participant' participant.id tagName='div'}}
+        {{participant.fullName}}
+      {{/link-to}}
+        <div><a href="mailto:{{participant.email}}">{{participant.email}}</a></div>
+    </div>
+  </li>
+{{/each}}
+</ul>
