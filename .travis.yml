@@ -35,13 +35,11 @@ before_install:
   - sudo rm -rf /usr/local/phantomjs/bin/phantomjs
   - sudo mv phantomjs /usr/local/phantomjs/bin/phantomjs
   - npm config set spin false
-  - npm install -g npm@^2
 
 install:
   - npm install -g bower
   - npm install
   - bower install
-  - phantomjs --version
 
 script:
   - ember try $EMBER_TRY_SCENARIO test
