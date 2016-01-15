@@ -1,5 +1,6 @@
 Building Cross Platform Applications
 ====================================
+[![Build Status](https://travis-ci.org/runspired/building-cross-platform.svg)](https://travis-ci.org/runspired/building-cross-platform)
 
 This repository accompanies the [CIE](http://cie.uchicago.edu/) class on
 [Building Cross Platform Applications](https://docs.google.com/document/d/1SEcE7M-a-Vl8ND_5Em_TFsZOwzSnBJWYCne_XsFNMl8/edit).
