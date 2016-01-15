@@ -10,13 +10,13 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember test"
+    "test": "ember try:testall"
   },
   "repository": "https://github.com/runspired/building-cross-platform.git",
   "engines": {
     "node": ">= 4.1.1"
   },
-  "author": "",
+  "author": "Chris Thoburn (@runspired)",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.1",
