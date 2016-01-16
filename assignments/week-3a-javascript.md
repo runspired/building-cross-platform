@@ -2,6 +2,25 @@
 
 ## Setup
 
+In our last class, you forked the `runspired/building-cross-platform` repository to your own profile,
+then cloned it to your computer.
+
+In this assignment, you will complete the exercises from `runspired/building-cross-platform` found on the branch
+`class/week-2`.  Once complete, you will `push` your work back to your Github fork, then open a Pull Request
+to merge your work into my branch.  (This will make more sense as we run through the steps).
+
+1. Add `upstream` as a `remote` to your local copy of the project.
+
+- `cd` into the project then run the following commands (in order)
+- Add my project as a "remote" called "upstream: `git remote add upstream https://github.com/runspired/building-cross-platform.git`
+
+2. Create a new local branch `class/week-2` from the "upstream" to use while completing these exercises 
+
+- Fetch the available branches from "upstream": `git fetch upstream`
+- Create a new branch locally for these exercises: `git branch class/week-2`
+- Switch over to your new branch: `git checkout class/week-2`
+- "Rebase" your new branch to mirror the "upstream" branch: `git rebase --hard upstream/class/week-2`
+
 ## Exercises
 
 Complete all of the exercises found in `app/utils`.  Each file in that directory is an exercise.
