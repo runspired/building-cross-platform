@@ -39,6 +39,7 @@ Recommended Completion Order
 
 - module-export
 - module-import
+- functions
 - conditionals-and
 - conditionals-if
 - conditionals-not
