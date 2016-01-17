@@ -40,10 +40,8 @@ Recommended Completion Order
 - module-export
 - module-import
 - functions
-- conditionals-and
+- conditionals
 - conditionals-if
-- conditionals-not
-- conditionals-or
 - conditionals-ternary
 - js-primitives
 - js-vars
