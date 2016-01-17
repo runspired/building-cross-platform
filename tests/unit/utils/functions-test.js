@@ -10,7 +10,7 @@ test('Sum correctly adds two numbers', function(assert) {
   result = sum(5, 2);
   assert.ok(result === 7);
 
-  let result = sum(-5, -3);
+  result = sum(-5, -3);
   assert.ok(result === -8);
 });
 
