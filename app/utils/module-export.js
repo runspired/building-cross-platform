@@ -36,7 +36,13 @@
  * In this exercise, you need to export three functions (named `foo`, `bar` and `baz`)
  * as well as export a default function `spam` which returns `true` when invoked.
  *
+ * You can read about functions here:
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
+ *
+ * If you were googling, don't read this unless you want, it comes later:
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function
+ *
  * You can read about exports here:
- * - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export
  *
  */
