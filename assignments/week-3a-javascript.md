@@ -93,6 +93,24 @@ Angular Style commit messages have the full form:
  
  `git commit -m "feat(module-export): completes the 'module export' exercise"`
 
-
-
 ## Final Steps
+
+Once you have completed the exercises (or, as you progress through them is you want to save your status somewhere
+other than your local machine), you should `push` your branch to your fork.  When you `clone`d your fork, it should
+have automatically set your fork to be a `remote` named `origin`.  To push your new branch, simply
+
+```
+git push origin class/week-2
+```
+
+Once you have pushed, visit your fork on Github, and click the green "New Pull Request" button.
+On the next screen:
+
+- `base fork` should be `runspired/building-cross-platform`
+- `base` should be `class/week-2`
+- `head fork` should be `<insert-your-username>/building-cross-platform`
+- `compare` should be `class/week-2`
+
+Click the Green `Create Pull Request` button, give it a descriptive title and 
+explanation, then click the Green `Create pull request` button underneath the form
+to continue.
