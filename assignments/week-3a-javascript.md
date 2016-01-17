@@ -114,3 +114,17 @@ On the next screen:
 Click the Green `Create Pull Request` button, give it a descriptive title and 
 explanation, then click the Green `Create pull request` button underneath the form
 to continue.
+
+## Gotchya
+
+I'm throwing an intentional kink in this one.  I'll be pushing new work to my fork tomorrow evening, it will
+contain an additional exercise, as well as some additional tests for the existing exercises.
+
+In order to resolve the "merge conflicts" that might arise because of this, you will need to rebase.
+Steps for rebasing:
+
+- `git fetch upstream`
+- `git rebase upstream/class/week-2`
+
+I *shouldn't* be making any changes that will cause you to need to do more than this, but we'll
+examine how to resolve conflicts that aren't so easy during class.
