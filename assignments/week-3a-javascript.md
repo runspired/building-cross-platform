@@ -129,3 +129,7 @@ Steps for rebasing:
 
 I *shouldn't* be making any changes that will cause you to need to do more than this, but we'll
 examine how to resolve conflicts that aren't so easy during class.
+
+## Extra Credit
+
+- https://vimeo.com/9270320
