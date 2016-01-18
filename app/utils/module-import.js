@@ -7,4 +7,6 @@
  *
  * ES6 allows you to "re-export" an import.
  *
+ * You will need to export all four functions that you imported as your default
+ * export.
  */
