@@ -26,7 +26,7 @@
  * export a function named `getType` which takes
  * a string (type) where:
  *
- * type will be one of `a`, `b`, `c`.
+ * type will be one of `a`, `b`, `c`, `d`.
  *
  * then finds the "number" for that type where:
  *
@@ -41,7 +41,7 @@
  * export a function named `getTypeB` which takes
  * a string (type) where:
  *
- * type will be one of `a`, `b`, `c`.
+ * type will be one of `a`, `b`, `c`, `d`, `e`.
  *
  * then finds the "number" for that type where:
  *
@@ -51,4 +51,3 @@
  *
  * do this using a `switch` statement
  */
-
