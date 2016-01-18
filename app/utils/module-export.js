@@ -46,3 +46,20 @@
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export
  *
  */
+
+// Export foo, bar, and baz:
+export function foo() {
+  return "foo"
+};
+
+export function bar() {
+  return "bar"
+};
+
+export function baz() {
+  return "baz"
+};
+
+export default function spam() {
+  return true;
+};
