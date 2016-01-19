@@ -1,5 +1,5 @@
 /*
- * export a default function that finds the hypotenuse
+ * export a default function (leave it unnamed) that finds the hypotenuse
  * of a box.
  *
  * The hypotenuse follows the formula a^2 + b^2 = c^2.
@@ -20,9 +20,9 @@
  * screen.  The position doesn't really matter, you just need to find the
  * dimensions (height and width) and use them as a and b.
  *
- * For this assignment, you should use `const` to destructure the object
- * you receive, there are two ways to implement this, see if you can discover
- * both.
+ * For this assignment, you should destructure the object
+ * you receive, there are two ways to implement this, see
+ * if you can discover both, only one will make the tests pass unfortunately.
  *
  * destructuring pulls out the pieces of an object you need to use.
  *
