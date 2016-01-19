@@ -19,7 +19,7 @@ to merge your work into my branch.  (This will make more sense as we run through
 - Fetch the available branches from "upstream": `git fetch upstream`
 - Create a new branch locally for these exercises: `git branch class/week-2`
 - Switch over to your new branch: `git checkout class/week-2`
-- "Rebase" your new branch to mirror the "upstream" branch: `git rebase --hard upstream/class/week-2`
+- "Reset" your new branch to mirror the "upstream" branch: `git reset --hard upstream/class/week-2`
 
 ## Exercises
 
