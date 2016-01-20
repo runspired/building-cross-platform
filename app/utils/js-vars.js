@@ -68,6 +68,9 @@
  */
 
 // export a function `is` that strictly compares `a` and `b`
+export function is(a, b){
+  return a === b;
+}
 
 // export a function `equal` that compares the structures of `a` and `b`.
 // for this exercise, we're going to assume that all objects have the following

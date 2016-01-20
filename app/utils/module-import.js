@@ -12,6 +12,6 @@
  */
 
 import {foo, bar, baz} from './module-export';
-import spam from './module-export';
+import spam from './module-export'; // NB: defaults don't take {}
 
 export {foo, bar, baz, spam};

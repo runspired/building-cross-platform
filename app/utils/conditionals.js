@@ -56,10 +56,10 @@ export function isTrue(a) {
 // export a function named `isTruthy` that returns whether a variable is `truthy`
 export function isTruthy(a) {
   // return a == true;
-  // return a;
+  // return a; // This is wrong: If you enter "foo", it does return "foo". That's ok. If something is there, it's truthy. That's all. :)
   if (a) {
     return true;
   }
   return false;
-  // If you enter "foo", it does return "foo". That's ok. If something is there, it's truthy. That's all. :)
+
 }
