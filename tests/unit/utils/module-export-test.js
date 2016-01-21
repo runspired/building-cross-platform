@@ -7,7 +7,7 @@ module('Unit | Utility | module export');
 
 test('The module has a default export', function(assert) {
   let result = moduleExport();
-  assert.ok(result);
+  assert.ok(result, 'The default export should return `true`.');
 });
 
 test('The module exports a function named foo', function(assert) {
@@ -19,5 +19,5 @@ test('The module exports a function named bar', function(assert) {
 });
 
 test('The module exports a function named baz', function(assert) {
-  assert.ok(bar && typeof bar === 'function');
+  assert.ok(baz && typeof baz === 'function');
 });

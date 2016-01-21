@@ -177,6 +177,6 @@ test('isTruthy correctly tests whether a variable is truthy', function(assert) {
   assert.equal(result, true, 'If supplied true, the result is true');
 
   result = isTruthy('hi');
-  assert.equal(result, true, 'If supplied a truthy value, the result is false');
+  assert.equal(result, true, 'If supplied a truthy value, the result is true');
 
 });
