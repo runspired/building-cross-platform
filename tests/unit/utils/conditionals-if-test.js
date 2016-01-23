@@ -43,7 +43,7 @@ test('bloodType returns the correct values.', function(assert) {
  *
  * Do this without using `else`.
  */
-test('bloodType returns the correct values.', function(assert) {
+test('advancedBloodType returns the correct values.', function(assert) {
   let result = advancedBloodType(0, 1);
   assert.equal(result, 'B+', '(0, 1) returns B+');
 
@@ -71,7 +71,7 @@ test('bloodType returns the correct values.', function(assert) {
   }
 
   result = advancedBloodType.toString().match(/else/);
-  assert.equal(!!result, true, 'You did not use else');
+  assert.equal(!!result, false, 'You did not use else');
 });
 
 /*
