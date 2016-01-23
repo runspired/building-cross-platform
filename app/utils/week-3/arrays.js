@@ -18,7 +18,7 @@
 
  Remove or insert (N) values at an arbitrary index
  - Array.splice https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
-*/
+ */
 
 /**!
  * @method inArray
@@ -27,6 +27,9 @@
  * @param {*} value | the value to look for in the array
  * @returns {boolean} whether the value is in the array
  */
+export function inArray(arr, value) {
+  return arr && arr.indexOf(value) !== -1;
+}
 
 /**!
  * @method remove
@@ -35,6 +38,11 @@
  * @param {*} value | the value to be removed from the array
  * @returns {*} The removed value
  */
+export function remove(arr, value) {
+  if (arr.indexOf(value !== -1)) {
+    return arr.splice(arr.indexOf(value), 1)[0];
+  }
+}
 
 /**!
  * @method append
@@ -43,6 +51,9 @@
  * @param value | The value to append to the array
  * @returns {Number} The length of the array
  */
+export function append(arr, value) {
+  return arr.push(value);
+}
 
 /**!
  * @method insertAt
@@ -53,6 +64,9 @@
  * @param index | The index at which to insert the value
  * @param value | The value to be inserted
  */
+export function insertAt(arr, index, value) {
+  arr.splice(index, 0, value);
+}
 
 /**!
  * @method get
@@ -61,6 +75,9 @@
  * @param index
  * @returns {*} The value at the specified index
  */
+export function get(arr, index) {
+  return arr[index];
+}
 
 /**!
  * @method set
@@ -71,3 +88,6 @@
  * @param index
  * @param value
  */
+export function set(arr, index, value) {
+  arr[index] = value;
+}

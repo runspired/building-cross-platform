@@ -1,15 +1,15 @@
 /*
-  # Objects
+ # Objects
 
-  Export the functions described by the following documentation comments
+ Export the functions described by the following documentation comments
 
-  ## Useful Resources
+ ## Useful Resources
 
-  - hasOwnProperty: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
-  - Error: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
-  - Prototypes: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype
-  - Constructor: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor
-  - http://stackoverflow.com/a/14486128/1883464
+ - hasOwnProperty: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
+ - Error: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
+ - Prototypes: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype
+ - Constructor: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor
+ - http://stackoverflow.com/a/14486128/1883464
  */
 
 /**!
@@ -26,6 +26,15 @@
  *
  * @returns {Boolean} `true` or `false`, whether the object contains the key.
  */
+export function isFromPrototype(obj, key) {
+  if (obj.hasOwnProperty(key)) {
+    return false;
+  }
+  if (obj[key] || obj.constructor.prototype.hasOwnProperty(key)) {
+    return true;
+  }
+  throw new Error(`KeyNotFound: the key '${key}' was not found in the object passed to 'isFromPrototype'`);
+}
 
 /**!
  * @method isInstanceOf
@@ -35,6 +44,9 @@
  *
  * @returns {boolean} whether the object instance is an instance of Type
  */
+export function isInstanceOf(instance, Type) {
+  return instance instanceof Type;
+}
 
 /**!
  * @method doesExtendType
@@ -46,3 +58,9 @@
  *
  * @returns {boolean} whether the object instance is an extension of Type
  */
+export function doesExtendType(instance, Type) {
+  if (!(instance instanceof Type)) {
+    return false;
+  }
+  return instance.constructor !== Type;
+}

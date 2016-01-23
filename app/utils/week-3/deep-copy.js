@@ -40,3 +40,68 @@
  to do an easy check to see if the object is within the array.
 
  */
+import Map from './map';
+
+export default function deepCopy(a, seen) {
+  if (!a) {
+    return a;
+  }
+  seen = seen || new Map();
+
+  const cached = seen.get(a);
+  if (cached) {
+    return cached;
+  }
+
+  if (isArray(a)) {
+    let arr = [];
+    seen.set(a, arr);
+
+    for (let i = 0; i < a.length; i++) {
+      arr[i] = deepCopy(a[i], seen);
+    }
+
+    return arr;
+  }
+
+  if (isObject(a)) {
+    let obj = {};
+    seen.set(a, obj);
+
+    for (let i in a) {
+      if (a.hasOwnProperty(i)) {
+        obj[i] = deepCopy(a[i], seen);
+      }
+    }
+
+    return obj;
+  }
+
+  return a;
+}
+
+function getType(obj) {
+  return Object.prototype.toString.call(obj);
+}
+
+function exists(a) {
+  return a !== undefined && a !== null;
+}
+
+function inArray(arr, value) {
+  return arr.indexOf(value) !== -1;
+}
+
+function pushUnique(arr, value) {
+  if (!inArray(arr)) {
+    arr.push(value);
+  }
+}
+
+function isArray(obj) {
+  return getType(obj) === '[object Array]';
+}
+
+function isObject(obj) {
+  return getType(obj) === '[object Object]';
+}
