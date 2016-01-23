@@ -50,3 +50,9 @@
  * discuss further in class.
  *
  */
+export default function({ top, left, right, bottom }) {
+  const height = bottom - top;
+  const width = right - left;
+
+  return Math.sqrt(height * height + width * width);
+}
