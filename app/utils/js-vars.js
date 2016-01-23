@@ -68,6 +68,9 @@
  */
 
 // export a function `is` that strictly compares `a` and `b`
+export function is(a, b) {
+  return a === b;
+}
 
 // export a function `equal` that compares the structures of `a` and `b`.
 // for this exercise, we're going to assume that all objects have the following
@@ -86,3 +89,20 @@
 // (you would have to look those things up on MDN.)
 // for extra credit, make this work with arbitrary objects, and with arbitrary depth.
 // to do so, you would need to utilize the `typeof` function
+export function equal(a, b) {
+  for (let i in a) {
+    if (a.hasOwnProperty(i)) {
+      if (!b.hasOwnProperty(i) || a[i] !== b[i]) {
+        return false;
+      }
+    }
+  }
+  for (let i in b) {
+    if (b.hasOwnProperty(i)) {
+      if (!a.hasOwnProperty(i) || a[i] !== b[i]) {
+        return false;
+      }
+    }
+  }
+  return true;
+}

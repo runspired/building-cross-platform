@@ -19,9 +19,21 @@
  */
 
 // export a function `willError` which when invoked throws an error
+export function willError() {
+  throw new Error("This errors");
+}
 
-// export a function which takes another function as it's first argument
+// export a default function which takes another function as it's first argument
 // tries to invoke it, and if it errors returns `false`, otherwise
 // it should return `true`.  Finally, it should set the property `finished`
 // to `true` on the second argument.
-
+export default function(fn, obj) {
+  try {
+    fn();
+    return true;
+  } catch (e) {
+    return false;
+  } finally {
+    obj.finished = true;
+  }
+}
