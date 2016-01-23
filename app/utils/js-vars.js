@@ -68,6 +68,9 @@
  */
 
 // export a function `is` that strictly compares `a` and `b`
+export function is(a, b) {
+  return a === b;
+}
 
 // export a function `equal` that compares the structures of `a` and `b`.
 // for this exercise, we're going to assume that all objects have the following
@@ -86,3 +89,15 @@
 // (you would have to look those things up on MDN.)
 // for extra credit, make this work with arbitrary objects, and with arbitrary depth.
 // to do so, you would need to utilize the `typeof` function
+
+var list = Object.keys(example)
+list = (key1, key2, key3, key 4)
+
+export function equal(a, b) {
+ for (var key in Object.keys(a)) {
+   if (a.key !== b.key) {
+     return false;
+   }
+ }
+ return true;
+ }

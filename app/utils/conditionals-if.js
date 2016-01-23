@@ -8,6 +8,21 @@
  * Do this without using `else`.
  */
 
+export function bloodType(number) {
+  if (isNaN(number)) {
+    return error;
+  }
+  if (number > 1) {
+    return 'A';
+  }
+  if (number < 1) {
+    return 'B';
+  }
+  if (number = 1) {
+    return 'O';
+  }
+}
+
 /*
  * export a function named `advancedBloodType` which
  * expects two numbers and returns
@@ -21,6 +36,30 @@
  *
  * Do this without using `else`.
  */
+
+export function advancedBloodType(a, b) {
+  if (isNaN(number)) {
+    return error;
+  }
+  if (a > 1 && b > 0) {
+    return 'A+';
+  }
+  if (a > 1 && b <= 0) {
+    return 'A-';
+  }
+  if (a < 1 && b > 0) {
+    return 'B+';
+  }
+  if (a < 1 && b <= 0) {
+    return 'B-';
+  }
+  if (a = 0 && b > 0) {
+    return '0+';
+  }
+  if (a = 0 && b <= 0) {
+    return '0-';
+  }
+}
 
 /*
  * export a function named `getType` which takes
@@ -37,6 +76,20 @@
  * do this using if, else if, else
  */
 
+export function getType(string) {
+  let number = 0;
+  if (string === 'a') {
+    number = 1;
+  } else if (string === 'b') {
+    number = 2;
+  } else if (string === 'c') {
+    number = 3;
+  } else {
+    number = 4;
+  }
+  return number * number;
+}
+
 /*
  * export a function named `getTypeB` which takes
  * a string (type) where:
@@ -51,3 +104,27 @@
  *
  * do this using a `switch` statement
  */
+export function getTypeB(string) {
+  let number = 0;
+  switch (string) {
+    case 'a':
+      number = 1;
+      break;
+    case 'b':
+      number = 2;
+      break;
+    case 'c':
+      number = 3;
+      break;
+    case 'd':
+      number = 4;
+      break;
+    case 'e':
+      number = 5;
+      break;
+    default:
+      number = 0;
+      break;
+    }
+  return (number * number) + 1;
+}

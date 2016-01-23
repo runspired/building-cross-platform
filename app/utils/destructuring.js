@@ -1,12 +1,10 @@
 /*
- * export a default function (leave it unnamed) that finds the hypotenuse
+ * Export a default function (leave it unnamed) that finds the hypotenuse
  * of a box.
  *
  * The hypotenuse follows the formula a^2 + b^2 = c^2.
- *
  * You can use `Math.sqrt` as needed to find the square root.
- *
- * The box you receive will be an object of the form
+* The box you receive will be an object of the form
  *
  * {
  *   top,
@@ -24,12 +22,10 @@
  * you receive, there are two ways to implement this, see
  * if you can discover both, only one will make the tests pass unfortunately.
  *
- * destructuring pulls out the pieces of an object you need to use.
+ * Destructuring pulls out the pieces of an object you need to use.
  *
  * For instance,
- *
  * `import { foo } from './functions';`
- *
  * is actually a destructuring assignment that "pulls" foo out of the functions
  * module.
  *
@@ -46,7 +42,18 @@
  * available to you to use without needing to do `Ember.copy`, `Ember.computed`
  * or `Ember.Component`.
  *
- * destructuring is useful for two code maintainability reasons we will
+ * Destructuring is useful for two code maintainability reasons we will
  * discuss further in class.
- *
  */
+1 2 6 3
+// export default function (top, left, right, bottom) {
+
+export default function (box) {
+  var [top, left, right, bottom] = box;
+  var x = right - left;
+  var y = top - bottom;
+  // var squared = x*x + y*y;
+  // var hypotenuse = Math.sqrt(squared);
+  var hypotenuse = Math.sqrt(x*x + y*y);
+  return hypotenuse;
+}
