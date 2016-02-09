@@ -12,6 +12,6 @@ export default DS.Model.extend({
   gravatar: DS.attr(),
 
   fullName: computed('firstName', 'lastName', function() {
-    return this.get('firstName') + ' ' + this.get('lastName');
+    return `${this.get('firstName')} ${this.get('lastName')}`;
   })
 });
