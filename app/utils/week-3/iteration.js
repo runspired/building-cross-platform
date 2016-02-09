@@ -1,14 +1,14 @@
 /*
-  # Iteration
+ # Iteration
 
  Export the functions described by the following documentation comments
 
-  ## Useful Resources
+ ## Useful Resources
 
-  - while https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while
-  - do while https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while
-  - for https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
-  - for in https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in
+ - while https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while
+ - do while https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while
+ - for https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
+ - for in https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in
 
  */
 
@@ -20,6 +20,11 @@
  * @param {Function} fnA
  * @param {Function} fnB
  */
+export function whileExample(fnA, fnB) {
+  while(fnA()) {
+    fnB();
+  }
+}
 
 /**!
  * @method doWhileExample
@@ -30,6 +35,11 @@
  * @param {Function} fnA
  * @param {Function} fnB
  */
+export function doWhileExample(fnA, fnB) {
+  do {
+    fnB();
+  } while (fnA());
+}
 
 /**!
  * @method forExample
@@ -39,6 +49,11 @@
  * @param {Array} arr
  * @param {Function} fn
  */
+export function forExample(arr, fn) {
+  for (let i = 0; i < arr.length; i++) {
+    fn(i, arr[i]);
+  }
+}
 
 /**!
  * @method blindForInExample
@@ -48,6 +63,11 @@
  * @param {Object} obj
  * @param {Function} fn
  */
+export function blindForInExample(obj, fn) {
+  for (let i in obj) {
+    fn(i, obj[i]);
+  }
+}
 
 /**!
  * @method forInExample
@@ -58,3 +78,10 @@
  * @param {Object} obj
  * @param {Function} fn
  */
+export function forInExample(obj, fn) {
+  for (let i in obj) {
+    if (obj.hasOwnProperty(i)) {
+      fn(i, obj[i]);
+    }
+  }
+}
