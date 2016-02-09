@@ -1,0 +1,13 @@
+<div class="col-xs-4">
+  {{async-image src=participant.gravatar}}
+</div>
+<div class="col-xs-8">
+  {{#link-to 'participant' participant.id tagName='div'}}
+    {{participant.fullName}}
+  {{/link-to}}
+  <button {{action "toggleExpand"}}>Expand</button>
+  {{#liquid-if isExpanded use="fade"}}
+    <div><a href="mailto:{{participant.email}}">{{participant.email}}</a></div>
+    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+  {{/liquid-if}}
+</div>

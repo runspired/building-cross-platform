@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'building-cross-platform',
+    podModulePrefix: 'building-cross-platform/routes',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

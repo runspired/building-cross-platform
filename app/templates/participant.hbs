@@ -1,2 +1,9 @@
 <h2>Participant</h2>
-{{model.fullName}}
+
+<ul>
+{{#game-feed games=model.games as |game|}}
+  <li>{{game.name}}</li>
+  {{else}}
+  <h3>You have no games</h3>
+{{/game-feed}}
+</ul>
