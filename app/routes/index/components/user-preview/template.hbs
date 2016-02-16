@@ -8,6 +8,10 @@
   <button {{action "toggleExpand"}}>Expand</button>
   {{#liquid-if isExpanded use="fade"}}
     <div><a href="mailto:{{participant.email}}">{{participant.email}}</a></div>
-    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+    {{user-form
+      firstName=participant.firstName
+      save=saveUser
+      participant=participant
+    }}
   {{/liquid-if}}
 </div>

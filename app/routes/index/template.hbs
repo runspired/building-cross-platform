@@ -1,6 +1,10 @@
 <h2>All Participants</h2>
 <ul class="container-fluid">
 {{#each model as |participant|}}
-  {{index/components/user-preview tagName='li' class="row" participant=participant}}
+  {{index/components/user-preview
+    saveUser=(action "updateUserFirstName")
+    tagName='li'
+    class="row"
+    participant=participant}}
 {{/each}}
 </ul>

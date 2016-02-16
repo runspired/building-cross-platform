@@ -19,6 +19,7 @@ export default Ember.Component.extend(RecognizerMixin, {
   },
 
   isExpanded: false,
+  saveUser: null,
 
   actions: {
     toggleExpand() {
