@@ -1,7 +1,7 @@
 import Ember from 'ember';
-import RecognizerMixin from 'ember-gestures/mixins/recognizers';
+//import RecognizerMixin from 'ember-gestures/mixins/recognizers';
 
-export default Ember.Component.extend(RecognizerMixin, {
+export default Ember.Component.extend({
   participant: null,
   classNames: ['participant-card'],
   recognizers: 'pan press',

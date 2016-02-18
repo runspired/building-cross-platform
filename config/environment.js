@@ -5,6 +5,13 @@ module.exports = function(environment) {
     modulePrefix: 'building-cross-platform',
     podModulePrefix: 'building-cross-platform/routes',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://build-cross-platform.firebaseio.com/',
+
+    torii: {
+      sessionServiceName: 'session'
+    },
+
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "runspired",
+  "name": "building-cross-platform",
   "version": "0.0.1",
   "chrome_url_overrides" : {
     "newtab": "index.html"
