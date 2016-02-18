@@ -1,0 +1,13 @@
+<h1>Conversation: {{model.name}}</h1>
+<ul>
+  {{#each model.messages as |message|}}
+    <li>
+      <strong>{{message.user.fullName}}</strong>
+      <p>{{message.text}}</p>
+    </li>
+  {{/each}}
+</ul>
+<div>
+  {{input type="text" value=message}}
+  <button {{action "sendMessage" message}}>Send</button>
+</div>

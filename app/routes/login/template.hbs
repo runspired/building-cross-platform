@@ -1,30 +1,41 @@
-{{#if isCompleting}}
-  <h2>Finish filling out your profile.</h2>
-<form>
-  <label>First Name</label>
-  {{input type="text" value=model.firstName}}
-  <br>
-  <label>Last Name</label>
-  {{input type="text" value=model.lastName}}
-  <br>
-  <label>Username</label>
-  {{input type="text" value=model.username}}
-  <br>
-  <button type="submit" {{action "createUser" email password}}>Complete</button>
-</form>
-{{else}}
-  <button {{action "toggleCreate"}}>{{if isCreating 'login instead' 'create account instead'}}</button>
-  <form>
-    <label>Email</label>
-    {{input type="text" value=email}}
-    <br>
-    <label>Password</label>
-    {{input type="password" value=password}}
-    <br>
-    {{#if isCreating}}
-      <button type="submit" {{action "createUser" email password}}>Create</button>
-    {{else}}
-      <button type="submit" {{action "login" email password}}>Login</button>
-    {{/if}}
-  </form>
-{{/if}}
+<screen>
+  <page>
+    <box>
+      <nav>
+        <h1>Runspired <button {{action "toggleCreate"}}>Create Account</button></h1>
+      </nav>
+    </box>
+    <vbox>
+      {{#if isCreating}}
+        <div>
+          <h2>Create Account</h2>
+          <label>Email</label><br>
+          {{input type="text" value=email}}
+          <br><label>Password</label><br>
+          {{input type="password" value=password}}
+          <button {{action "createUser" email password}}>Create</button>
+        </div>
+      {{else if isCompleting}}
+        <div>
+          <h2>Account Details</h2>
+          <label>Username</label><br>
+          {{input type="text" value=model.username}}
+          <br><label>First Name</label><br>
+          {{input type="text" value=model.firstName}}
+          <br><label>Last Name</label><br>
+          {{input type="text" value=model.lastName}}
+          <button {{action "completeUser" model}}>Complete</button>
+        </div>
+      {{else}}
+        <div>
+          <h2>Sign In</h2>
+          <label>Email</label><br>
+          {{input type="text" value=email}}
+          <br><label>Password</label><br>
+          {{input type="password" value=password}}
+          <button {{action "signIn" email password}}>Sign In</button>
+        </div>
+      {{/if}}
+    </vbox>
+  </page>
+</screen>

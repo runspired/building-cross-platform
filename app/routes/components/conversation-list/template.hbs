@@ -1,0 +1,7 @@
+<ul>
+  {{#each conversations as |conversation|}}
+    <li>{{#link-to 'conversations.single' conversation.id}}{{conversation.name}}{{/link-to}}</li>
+  {{else}}
+    <li>{{#link-to 'conversations.new'}}Start a conversation{{/link-to}}</li>
+  {{/each}}
+</ul>

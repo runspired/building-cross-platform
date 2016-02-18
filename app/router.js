@@ -6,15 +6,12 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('participant', { path: '/:id' });
-
-  this.route('participants', function() {
-    this.route('single', { path: '/:id' });
-    this.route('edit');
-    this.route('index');
-  });
-
   this.route('login');
+  this.route('conversations', function() {
+    this.route('single', { path: 'single/:id'});
+    this.route('new');
+    this.route('index', { path: '/' });
+  });
 });
 
 export default Router;

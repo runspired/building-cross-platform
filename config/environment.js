@@ -5,7 +5,10 @@ module.exports = function(environment) {
     modulePrefix: 'building-cross-platform',
     podModulePrefix: 'building-cross-platform/routes',
     environment: environment,
-    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    contentSecurityPolicy: {
+      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
+      'script-src': "'self' https://runspired.firebaseio.com"
+    },
     firebase: 'https://build-cross-platform.firebaseio.com/',
 
     torii: {
@@ -28,7 +31,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
+    ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;

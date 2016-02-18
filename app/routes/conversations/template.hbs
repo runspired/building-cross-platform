@@ -1,0 +1,12 @@
+{{#if device.isMobile}}
+  {{outlet}}
+{{else}}
+  <div>
+    <div>
+      {{conversation-list conversations=model}}
+    </div>
+    <div>
+      {{outlet}}
+    </div>
+  </div>
+{{/if}}
