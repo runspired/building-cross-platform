@@ -33,10 +33,10 @@ or find it via spotlight by hitting `command (space)` to launch spotlight and ty
 Terminal is a `Command Line`, through with you type commands (instructions) to your computer. Groups
 of instructions are usually called an `interface`.  When you see `CLI` or `cli` on a project, it means
 that project exposes a "Command Line Interface" you can use.
-
-4. [Optional] I recommend changing your default terminal theme in "preferences" to "Homebrew".
-5. Install [xcode](https://developer.apple.com/xcode/) from the [AppStore](https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12#)
-6. Install the `xcode command line tools` by following the directions below (in order).
+4. Run `touch ~/.profile`
+5. [Optional] I recommend changing your default terminal theme in "preferences" to "Homebrew".
+6. Install [xcode](https://developer.apple.com/xcode/) from the [AppStore](https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12#)
+7. Install the `xcode command line tools` by following the directions below (in order).
   1. Open a new `Terminal` window
   2. type `xcode-select --version` and "run" it by hitting "return/enter", if you don't see something similar to 
  `xcode-select version 2343.` as a response, and you have completed step 3 (including restarting your computer
@@ -50,44 +50,44 @@ that project exposes a "Command Line Interface" you can use.
     - press and hold the "space" bar to scroll to the end of the license text.
     - type "agree" and press "enter/return" to accept the license.
 
-7. Type `git --version` to ensure that all the steps above have worked appropriately. You should see something
+8. Type `git --version` to ensure that all the steps above have worked appropriately. You should see something
 like `git version 2.1.3` printed to the console. If not, something has gone wrong or been skipped. Please reach
 out for assistance either in the CIE Slack channel for this class or by emailing the instructor at *runspired[at]gmail*.
 
-8. Type `ruby --version` to ensure that we have `ruby` available to us. `ruby` is a CLI for the `ruby` language,
+9. Type `ruby --version` to ensure that we have `ruby` available to us. `ruby` is a CLI for the `ruby` language,
   we are going to use it to install `brew` in the next step.
 
-9. Install `brew`. Brew is one of several *package managers* we will be using for this course.
+10. Install `brew`. Brew is one of several *package managers* we will be using for this course.
 Run the following command in Terminal to install *brew*
 `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-10. Tell `brew` to update already installed packages by running `brew update`
+11. Tell `brew` to update already installed packages by running `brew update`
 
-11. [Optional] Install ZSH and Oh-MY-ZSH to spice up the Terminal Application. This will greatly improve your terminal
+12. [Optional] Install ZSH and Oh-MY-ZSH to spice up the Terminal Application. This will greatly improve your terminal
 experience with better autocomplete, search, navigation, and text color features.
   1. `brew install zsh`
   2. `curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh`
   3. `chsh -s /bin/zsh`
   
-12. Run the command below to install `watchman`, an extremely efficient file-watcher built by Facebook
+13. Run the command below to install `watchman`, an extremely efficient file-watcher built by Facebook
   - `brew install watchman`
   
-13. Run the command below to install `phantomjs` version `2.0`, a "headless browser" we will use for many tasks.
+14. Run the command below to install `phantomjs` version `2.0`, a "headless browser" we will use for many tasks.
   - `brew install phantomjs`
     
-14. Run the command below to install `nvm`, a version manager for `node`
+15. Run the command below to install `nvm`, a version manager for `node`
   - `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash`
 
-15. Install `node` version `4.2.4` by running the following commands
+16. Install `node` version `4.2.4` by running the following commands
   - `nvm install 4.2.4`
   - `nvm use 4.2.4`
   - `nvm alias default 4.2.4`
   
-16. Install `bower`, note, the below says "npm" not "nvm". "npm" is a package manager that came bundled with "node".
+17. Install `bower`, note, the below says "npm" not "nvm". "npm" is a package manager that came bundled with "node".
   - `npm install -g bower`
 
-17. Install 'ember-cli' by running the following command.
+18. Install 'ember-cli' by running the following command.
   - `npm install -g ember-cli`
   
-18. Type `ember -v`, if the output contains something along the lines of `version: 1.13.12` we are done! :)
+19. Type `ember -v`, if the output contains something along the lines of `version: 2.3.0` we are done! :)
 
