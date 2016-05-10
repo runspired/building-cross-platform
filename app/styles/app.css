@@ -16,3 +16,7 @@ body {
 .participant-card:nth-of-type(even) {
   background: #333;
 }
+
+input {
+  color: #444;
+}

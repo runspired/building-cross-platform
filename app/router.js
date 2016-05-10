@@ -6,7 +6,15 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+
   this.route('participant', { path: '/:id' });
+
+  this.route('participants', function() {
+    this.route('single', { path: '/:id' });
+    this.route('edit');
+    this.route('index');
+  });
+
 });
 
 export default Router;
